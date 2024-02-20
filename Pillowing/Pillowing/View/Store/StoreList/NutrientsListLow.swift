@@ -18,6 +18,7 @@ struct NutrientsListLow: View {
             
             VStack(alignment:.leading ,spacing: 0){
                 Text("\(nutrients.name)")
+                    .lineLimit(1)
                     .font(.headline)
                 HStack{
                     Text("\(nutrients.count)캡슐")
@@ -32,7 +33,7 @@ struct NutrientsListLow: View {
                 
                 //Nutrients 객체에서 평점을 얻어오는 프로퍼티가 필요함
                 HStack {
-                    StarView(starCount: 4.0)
+                    StarView(starCount: 4.0, reviewCount: nutrients.reviews?.count ?? 0)
                         .font(.caption2)
                     Spacer()
                     Text("(하루에 \(nutrients.price/nutrients.count)원)")

@@ -10,15 +10,16 @@ import SwiftUI
 struct RankItemView: View {
     var nutirentsStore = NutrientsStore()
     var nutirent : Nutrients
+    var rank : Int
     var body: some View {
         HStack {
             VStack(spacing: -20){
-                nutirentsStore.nutrients[0].image
+                nutirent.image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(height: 70)
                     .padding()
-                Text("실시간 1위")
+                Text("실시간 \(rank)위")
                     .bold()
                     .font(.system(size: 9))
                     .foregroundColor(.white)
@@ -55,5 +56,5 @@ struct RankItemView: View {
 }
 
 #Preview {
-    RankItemView(nutirent: Nutrients(name: "락토핏 생유산균 골드", count: 80, price: 11500, storeURL: "https://link.coupang.com/a/bq9bXH", category: .largeIntestine))
+    RankItemView(nutirent: Nutrients(name: "락토핏 생유산균 골드", count: 80, price: 11500, storeURL: "https://link.coupang.com/a/bq9bXH", category: .largeIntestine), rank: 1)
 }
