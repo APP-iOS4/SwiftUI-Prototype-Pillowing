@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum NutrientsType: String {
+enum NutrientsType: String , CaseIterable {
     case eye = "눈"
     case bone = "뼈"
     case skin = "피부"
