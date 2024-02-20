@@ -15,6 +15,7 @@ struct ReviewView: View {
     
     #을 입력해 태그를 추가할 수도 있어요.
     """
+    let nutrientsStore = NutrientsStore()
     
     var body: some View {
         NavigationStack {
@@ -22,9 +23,9 @@ struct ReviewView: View {
                 Image(systemName: "circle")
                 
                 VStack(alignment: .leading) {
-                    Text("브랜드")
+                    Text("\(nutrientsStore.nutrients[0].category.rawValue)")
                         .foregroundStyle(.gray)
-                    Text("영양제이름")
+                    Text("\(nutrientsStore.nutrients[0].name)")
                 }
                 Spacer()
             }
@@ -66,9 +67,10 @@ struct ReviewView: View {
                 
                 ZStack(alignment: .topLeading) {
                     TextEditor(text: $review)
-                        .frame(minHeight: 50, maxHeight: 100)
+                        .frame(maxHeight: 100)
                     if review.isEmpty {
                         Text(placeholderText)
+                            .padding()
                             .foregroundStyle(.gray)
                     }
                 }
