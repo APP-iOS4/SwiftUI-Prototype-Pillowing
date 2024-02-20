@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		468F0CFD2B847BB600E9F884 /* SortButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F0CFC2B847BB600E9F884 /* SortButtonView.swift */; };
+		468F0D012B8482D600E9F884 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F0D002B8482D600E9F884 /* StarView.swift */; };
+		46B5B18E2B84466200C6EC8A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B5B18D2B84466200C6EC8A /* CustomTextField.swift */; };
+		46B5B1902B845DEF00C6EC8A /* RankItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B5B18F2B845DEF00C6EC8A /* RankItemView.swift */; };
+		46B5B1922B846E0800C6EC8A /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B5B1912B846E0800C6EC8A /* CategoryView.swift */; };
+		46B5B1942B84748800C6EC8A /* NutrientsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B5B1932B84748800C6EC8A /* NutrientsListView.swift */; };
+		46B5B1962B84759B00C6EC8A /* NutrientsListLow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B5B1952B84759B00C6EC8A /* NutrientsListLow.swift */; };
 		A8BD67562B8426BE0086469C /* PillowingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BD67552B8426BE0086469C /* PillowingApp.swift */; };
 		A8BD67582B8426BE0086469C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BD67572B8426BE0086469C /* ContentView.swift */; };
 		A8BD675A2B8426BF0086469C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8BD67592B8426BF0086469C /* Assets.xcassets */; };
@@ -21,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		468F0CFC2B847BB600E9F884 /* SortButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortButtonView.swift; sourceTree = "<group>"; };
+		468F0D002B8482D600E9F884 /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
+		46B5B18D2B84466200C6EC8A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		46B5B18F2B845DEF00C6EC8A /* RankItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankItemView.swift; sourceTree = "<group>"; };
+		46B5B1912B846E0800C6EC8A /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		46B5B1932B84748800C6EC8A /* NutrientsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsListView.swift; sourceTree = "<group>"; };
+		46B5B1952B84759B00C6EC8A /* NutrientsListLow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsListLow.swift; sourceTree = "<group>"; };
 		A8BD67522B8426BE0086469C /* Pillowing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pillowing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8BD67552B8426BE0086469C /* PillowingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillowingApp.swift; sourceTree = "<group>"; };
 		A8BD67572B8426BE0086469C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +60,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		468F0CFE2B847BB900E9F884 /* MainStore */ = {
+			isa = PBXGroup;
+			children = (
+				A8BD676B2B843C740086469C /* StoreView.swift */,
+				46B5B18F2B845DEF00C6EC8A /* RankItemView.swift */,
+				46B5B1912B846E0800C6EC8A /* CategoryView.swift */,
+				46B5B18D2B84466200C6EC8A /* CustomTextField.swift */,
+			);
+			path = MainStore;
+			sourceTree = "<group>";
+		};
+		468F0CFF2B847CA100E9F884 /* StoreList */ = {
+			isa = PBXGroup;
+			children = (
+				46B5B1932B84748800C6EC8A /* NutrientsListView.swift */,
+				46B5B1952B84759B00C6EC8A /* NutrientsListLow.swift */,
+				468F0D002B8482D600E9F884 /* StarView.swift */,
+				468F0CFC2B847BB600E9F884 /* SortButtonView.swift */,
+			);
+			path = StoreList;
+			sourceTree = "<group>";
+		};
 		A8BD67492B8426BE0086469C = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +151,8 @@
 		A8BD676E2B843C8B0086469C /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				A8BD676B2B843C740086469C /* StoreView.swift */,
+				468F0CFE2B847BB900E9F884 /* MainStore */,
+				468F0CFF2B847CA100E9F884 /* StoreList */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -202,10 +239,17 @@
 				A8BD676A2B843C660086469C /* CalendarView.swift in Sources */,
 				A8BD67682B84362F0086469C /* NutrientsStore.swift in Sources */,
 				A8BD67582B8426BE0086469C /* ContentView.swift in Sources */,
+				46B5B1922B846E0800C6EC8A /* CategoryView.swift in Sources */,
+				46B5B1902B845DEF00C6EC8A /* RankItemView.swift in Sources */,
+				46B5B1942B84748800C6EC8A /* NutrientsListView.swift in Sources */,
+				468F0CFD2B847BB600E9F884 /* SortButtonView.swift in Sources */,
+				46B5B18E2B84466200C6EC8A /* CustomTextField.swift in Sources */,
 				A8BD67662B84270F0086469C /* Nutrients.swift in Sources */,
 				A8BD67732B8442860086469C /* DailyNutrientsView.swift in Sources */,
 				A8BD676C2B843C740086469C /* StoreView.swift in Sources */,
 				A8BD67562B8426BE0086469C /* PillowingApp.swift in Sources */,
+				468F0D012B8482D600E9F884 /* StarView.swift in Sources */,
+				46B5B1962B84759B00C6EC8A /* NutrientsListLow.swift in Sources */,
 				A8BD67752B84768B0086469C /* CustomCalendarSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,7 +384,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pillowing/Preview Content\"";
-				DEVELOPMENT_TEAM = 5B94TFMJJ4;
+				DEVELOPMENT_TEAM = U3XKZ56Z4Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -369,7 +413,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pillowing/Preview Content\"";
-				DEVELOPMENT_TEAM = 5B94TFMJJ4;
+				DEVELOPMENT_TEAM = U3XKZ56Z4Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
