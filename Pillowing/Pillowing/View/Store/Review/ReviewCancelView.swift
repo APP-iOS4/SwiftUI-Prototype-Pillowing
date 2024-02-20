@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct ReviewCancleView: View {
+struct ReviewCancelView: View {
+    @Binding var isCancelReview: Bool
+    
     var body: some View {
         ZStack {
-            ReviewView()
             Rectangle()
                 .edgesIgnoringSafeArea(.all)
                 .opacity(0.5)
@@ -20,7 +21,7 @@ struct ReviewCancleView: View {
                 
                 HStack {
                     Button {
-                        
+                        isCancelReview.toggle()
                     } label: {
                         Text("취소")
                             .padding(EdgeInsets(top: 10, leading: 50, bottom: 10, trailing: 50))
@@ -31,7 +32,7 @@ struct ReviewCancleView: View {
                             )
                     }
                     Button {
-                        
+                        isCancelReview.toggle()
                     } label: {
                         Text("확인")
                             .padding(EdgeInsets(top: 10, leading: 50, bottom: 10, trailing: 50))
@@ -54,5 +55,5 @@ struct ReviewCancleView: View {
 }
 
 #Preview {
-    ReviewCancleView()
+    ReviewCancelView(isCancelReview: .constant(true))
 }

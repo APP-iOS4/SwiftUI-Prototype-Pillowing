@@ -16,7 +16,7 @@ struct ContentView: View {
                 }
                 .tag(0)
             
-            StoreView()
+            ReviewView()
                 .tabItem {
                     Label("스토어", systemImage: "storefront")
                 }
