@@ -9,6 +9,7 @@ import SwiftUI
 
 struct IntakeDayView: View {
     
+    @Binding var isShowingSheet: Bool
     @State private var isMondayToggled = false
     @State private var isTuesdayToggled = false
     @State private var isWednesdayToggled = false
@@ -98,7 +99,7 @@ struct IntakeDayView: View {
             .padding()
             
                 Button(action: {
-                    
+                    isShowingSheet.toggle()
                 }, label: {
                     Text("확인")
                 })
@@ -112,5 +113,5 @@ struct IntakeDayView: View {
 }
 
 #Preview {
-        IntakeDayView()
+    IntakeDayView(isShowingSheet: .constant(true))
 }
