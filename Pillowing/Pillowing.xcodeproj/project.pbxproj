@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72CAE2302B84622800471546 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CAE22F2B84622800471546 /* ReviewView.swift */; };
+		72CAE2322B8477C800471546 /* ReviewCancleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CAE2312B8477C800471546 /* ReviewCancleView.swift */; };
 		A8BD67562B8426BE0086469C /* PillowingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BD67552B8426BE0086469C /* PillowingApp.swift */; };
 		A8BD67582B8426BE0086469C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BD67572B8426BE0086469C /* ContentView.swift */; };
 		A8BD675A2B8426BF0086469C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8BD67592B8426BF0086469C /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72CAE22F2B84622800471546 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		72CAE2312B8477C800471546 /* ReviewCancleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCancleView.swift; sourceTree = "<group>"; };
 		A8BD67522B8426BE0086469C /* Pillowing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pillowing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8BD67552B8426BE0086469C /* PillowingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillowingApp.swift; sourceTree = "<group>"; };
 		A8BD67572B8426BE0086469C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				A8BD676B2B843C740086469C /* StoreView.swift */,
+				72CAE22F2B84622800471546 /* ReviewView.swift */,
+				72CAE2312B8477C800471546 /* ReviewCancleView.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -192,9 +198,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72CAE2302B84622800471546 /* ReviewView.swift in Sources */,
 				A8BD67712B843C9E0086469C /* MyView.swift in Sources */,
 				A8BD676A2B843C660086469C /* CalendarView.swift in Sources */,
 				A8BD67682B84362F0086469C /* NutrientsStore.swift in Sources */,
+				72CAE2322B8477C800471546 /* ReviewCancleView.swift in Sources */,
 				A8BD67582B8426BE0086469C /* ContentView.swift in Sources */,
 				A8BD67662B84270F0086469C /* Nutrients.swift in Sources */,
 				A8BD676C2B843C740086469C /* StoreView.swift in Sources */,
