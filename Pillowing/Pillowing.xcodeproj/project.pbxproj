@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		72CAE2302B84622800471546 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CAE22F2B84622800471546 /* ReviewView.swift */; };
+		72CAE2322B8477C800471546 /* ReviewCancleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CAE2312B8477C800471546 /* ReviewCancleView.swift */; };
 		468F0CFD2B847BB600E9F884 /* SortButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F0CFC2B847BB600E9F884 /* SortButtonView.swift */; };
 		468F0D012B8482D600E9F884 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468F0D002B8482D600E9F884 /* StarView.swift */; };
 		46B5B18E2B84466200C6EC8A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B5B18D2B84466200C6EC8A /* CustomTextField.swift */; };
@@ -31,6 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
+		72CAE22F2B84622800471546 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		72CAE2312B8477C800471546 /* ReviewCancleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCancleView.swift; sourceTree = "<group>"; };
 		468F0CFC2B847BB600E9F884 /* SortButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortButtonView.swift; sourceTree = "<group>"; };
 		468F0D002B8482D600E9F884 /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
 		46B5B18D2B84466200C6EC8A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -157,6 +163,9 @@
 		A8BD676E2B843C8B0086469C /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				A8BD676B2B843C740086469C /* StoreView.swift */,
+				72CAE22F2B84622800471546 /* ReviewView.swift */,
+				72CAE2312B8477C800471546 /* ReviewCancleView.swift */,
 				468F0CFE2B847BB900E9F884 /* MainStore */,
 				468F0CFF2B847CA100E9F884 /* StoreList */,
 			);
@@ -244,10 +253,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72CAE2302B84622800471546 /* ReviewView.swift in Sources */,
 				A8BD67712B843C9E0086469C /* MyView.swift in Sources */,
 				EFA847CF2B844289002D7126 /* MyDetailView.swift in Sources */,
 				A8BD676A2B843C660086469C /* CalendarView.swift in Sources */,
 				A8BD67682B84362F0086469C /* NutrientsStore.swift in Sources */,
+				72CAE2322B8477C800471546 /* ReviewCancleView.swift in Sources */,
 				EFA847D32B844336002D7126 /* IntakeCountView.swift in Sources */,
 				A8BD67582B8426BE0086469C /* ContentView.swift in Sources */,
 				EFA847D12B8442B3002D7126 /* IntakeDayView.swift in Sources */,
