@@ -17,14 +17,14 @@ enum NutrientsType: String , CaseIterable {
     case vitamin = "종합 비타민"
 }
 
-enum Days {
-    case Monday
-    case Tuesday
-    case Wednesday
-    case Thursday
-    case Friday
-    case Saturday
-    case Sunday
+enum Days: String {
+    case Monday = "월요일"
+    case Tuesday = "화요일"
+    case Wednesday = "수요일"
+    case Thursday = "목요일"
+    case Friday = "금요일"
+    case Saturday = "토요일"
+    case Sunday = "일요일"
 }
 
 struct Nutrients {
