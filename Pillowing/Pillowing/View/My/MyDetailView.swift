@@ -166,6 +166,7 @@ struct MyDetailView: View {
                 .presentationDetents([.height(500)])
             //                .presentationCornerRadius(40)
         }
+        .toolbar(.hidden, for: .tabBar)
     }
 }
 

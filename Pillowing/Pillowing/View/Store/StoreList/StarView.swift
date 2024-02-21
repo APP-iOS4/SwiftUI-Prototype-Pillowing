@@ -11,7 +11,7 @@ struct StarView: View {
     var starCount : Double
     var reviewCount : Int
     var body: some View {
-        HStack(spacing:-1){
+        HStack( spacing:-1){
             ForEach(1..<6){ num in
                 if num <= Int(starCount) {
                     Image(systemName: "star.fill")
@@ -25,9 +25,10 @@ struct StarView: View {
                 .font(.body)
                 .padding(.leading,5)
             Text("(\(reviewCount))")
-                .font(.body)
+                .font(.caption)
                 .padding(.leading,2)
                 .foregroundStyle(.gray)
+                
         }
         
     }

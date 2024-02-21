@@ -16,11 +16,12 @@ struct CustomTextField: TextFieldStyle {
                     .opacity(0.8)
                     .cornerRadius(12)
                     .frame(height: 40)
-                
+                   
                 // 텍스트필드
                 configuration
                     
                     .padding()
+
             }
         }
 }
