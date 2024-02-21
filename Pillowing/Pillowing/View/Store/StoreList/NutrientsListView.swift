@@ -36,9 +36,12 @@ struct NutrientsListView: View {
                     }, label: {
                         SortButtonView(sortName: "\(sortType.rawValue)")
                             .foregroundColor(selectedSortType == sortType ? Color.white : Color.gray)
+                            
                             .background(
                                 RoundedRectangle(cornerRadius: 15)
-                                    .fill(selectedSortType == sortType ? Color.gray : Color.white)
+                                    .fill(selectedSortType == sortType ? Color.accent : Color.white)
+                                    
+            
                             )
                     })
                 }
@@ -55,7 +58,6 @@ struct NutrientsListView: View {
                 Spacer()
             }
             List{
-
                 ForEach(filterNutrients) { nutrients in
                     NutrientsListLow(nutrients: nutrients)
                 }
