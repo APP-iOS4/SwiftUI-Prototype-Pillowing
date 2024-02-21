@@ -17,6 +17,16 @@ struct StoreView: View {
     var nutreintsByRank : [Nutrients] {
         nutreintsStore.getNutirentsBySortType(sortType: .starRating, category: .vitamin , allType: true)
     }
+//case eye = "눈"
+//case bone = "뼈"
+//case skin = "피부"
+//case liver = "간"
+//case largeIntestine = "대장"
+//case vitamin = "종합 비타민"
+    //카테고리 이미지
+    var categoriesImage : [String] = [
+        "eyeCategory","boneCategory","skinCategory","liverCategory","largeIntestineCategory","vitaminCategory"
+    ]
     
     var gridItems = [
         GridItem(.flexible()),
@@ -69,12 +79,12 @@ struct StoreView: View {
                     }
                     ScrollView(.vertical) {
                         LazyVGrid(columns: gridItems){
-                            ForEach(NutrientsType.allCases , id: \.self) { nutrientType in
+                            ForEach(Array(NutrientsType.allCases.enumerated()) , id: \.1) { index,nutrientType in
                                 NavigationLink {
                                     NutrientsListView( nutrientsType: nutrientType)
                                 } label: {
                                     VStack{
-                                        CategoryView(categoryName: nutrientType.rawValue, categoryImage: "person.fill")
+                                        CategoryView(categoryName: nutrientType.rawValue, categoryImage: categoriesImage[index])
                                     }
                                 }
                                 
