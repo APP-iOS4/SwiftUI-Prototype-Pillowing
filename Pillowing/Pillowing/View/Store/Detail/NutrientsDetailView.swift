@@ -47,7 +47,7 @@ struct NutrientsDetailView: View {
                 }
                 
                 // Review Write Button
-                NavigationLink(destination: ReviewView()) {
+                NavigationLink(destination: ReviewView( nutrient: nutrient)) {
                     ZStack {
                         Rectangle()
                             .fill(Color("AccentColor"))

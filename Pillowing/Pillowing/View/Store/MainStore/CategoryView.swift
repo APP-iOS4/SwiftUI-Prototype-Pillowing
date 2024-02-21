@@ -12,7 +12,7 @@ struct CategoryView: View {
     var categoryImage : String
     var body: some View {
         VStack {
-            Image(systemName: categoryImage)
+            Image(categoryImage)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 50)

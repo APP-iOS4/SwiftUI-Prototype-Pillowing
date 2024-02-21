@@ -19,6 +19,7 @@ struct ReviewView: View {
     #을 입력해 태그를 추가할 수도 있어요.
     """
     let nutrientsStore = NutrientsStore()
+    let nutrient : Nutrients
     @State var stars: [Bool] = [true, true, true, true, true]
     
     var body: some View {
@@ -36,15 +37,15 @@ struct ReviewView: View {
                 //                }
                 
                 HStack {
-                    nutrientsStore.nutrients[0].image
+                    nutrient.image
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 30)
                         .padding()
                     VStack(alignment: .leading) {
-                        Text("\(nutrientsStore.nutrients[0].category.rawValue)")
+                        Text("\(nutrient.category.rawValue)")
                             .foregroundStyle(.gray)
-                        Text("\(nutrientsStore.nutrients[0].name)")
+                        Text("\(nutrient.name)")
                     }
                     Spacer()
                 }
@@ -152,6 +153,6 @@ struct ReviewView: View {
 
 #Preview {
     NavigationStack {
-        ReviewView()
+        ReviewView(nutrient: NutrientsStore().nutrients[0])
     }
 }

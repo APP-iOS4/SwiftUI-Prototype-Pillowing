@@ -36,7 +36,7 @@ struct NutrientsListLow: View {
                 
                 //Nutrients 객체에서 평점을 얻어오는 프로퍼티가 필요함
                 HStack {
-                    StarView(starCount: 4.0, reviewCount: nutrients.reviews?.count ?? 0)
+                    StarView(starCount: nutrients.gradeAverage, reviewCount: nutrients.reviews?.count ?? 0)
                         .font(.caption2)
                         .foregroundStyle(.black)
                     Spacer()

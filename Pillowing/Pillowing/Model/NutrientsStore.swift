@@ -114,21 +114,35 @@ class NutrientsStore {
             "효과가 너무 미미해서 기대 이하에요.",
             "다른 사람들이 좋다고 해서 샀는데, 제게는 맞지 않는 것 같아요."
         ]
+        let testGrade = [
+            5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+            4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,
+            3,3,3,3,3,3,
+            2,2,2,2,2,
+            1,1,1,1
+        ]
         for index in 0..<nutrients.count {
             if nutrients[index].reviews == nil {
                 nutrients[index].reviews = []
             }
-            var grade = (1...5).randomElement()!
-            var desrcription = grade > 3 ? testDescription.randomElement()! : testBadDescription.randomElement()!
-            let exampleReview1 = Review(userName: testUser.randomElement()!, grade: grade, description: desrcription)
-            grade = (1...5).randomElement()!
-            desrcription = grade > 3 ? testDescription.randomElement()! : testBadDescription.randomElement()!
-            let exampleReview2 = Review(userName: testUser.randomElement()!, grade: grade, description: desrcription)
-            grade = (1...5).randomElement()!
-            desrcription = grade > 3 ? testDescription.randomElement()! : testBadDescription.randomElement()!
-            let exampleReview3 = Review(userName: testUser.randomElement()!, grade: grade, description: desrcription)
+//            var grade = testGrade.randomElement()!
+//            var desrcription = grade > 3 ? testDescription.randomElement()! : testBadDescription.randomElement()!
+//            let exampleReview1 = Review(userName: testUser.randomElement()!, grade: grade, description: desrcription)
+//            grade = testGrade.randomElement()!
+//            desrcription = grade > 3 ? testDescription.randomElement()! : testBadDescription.randomElement()!
+//            let exampleReview2 = Review(userName: testUser.randomElement()!, grade: grade, description: desrcription)
+//            grade = testGrade.randomElement()!
+//            desrcription = grade > 3 ? testDescription.randomElement()! : testBadDescription.randomElement()!
+//            let exampleReview3 = Review(userName: testUser.randomElement()!, grade: grade, description: desrcription)
+//            
+//            nutrients[index].reviews?.append(contentsOf: [exampleReview1, exampleReview2, exampleReview3])
+            for _ in 0...(1...100).randomElement()! {
+                let grade = testGrade.randomElement()!
+                let desrcription = grade > 3 ? testDescription.randomElement()! : testBadDescription.randomElement()!
+                let exampleReview1 = Review(userName: testUser.randomElement()!, grade: grade, description: desrcription)
+                nutrients[index].reviews?.append(exampleReview1)
+            }
             
-            nutrients[index].reviews?.append(contentsOf: [exampleReview1, exampleReview2, exampleReview3])
         }
     }
 }
