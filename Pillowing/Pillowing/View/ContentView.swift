@@ -15,13 +15,11 @@ struct ContentView: View {
                     Label("캘린더", systemImage: "calendar")
                 }
                 .tag(0)
-            
             StoreView()
                 .tabItem {
                     Label("스토어", systemImage: "storefront")
                 }
                 .tag(1)
-            
             MyView()
                 .tabItem {
                     Label("마이", systemImage: "person.fill")

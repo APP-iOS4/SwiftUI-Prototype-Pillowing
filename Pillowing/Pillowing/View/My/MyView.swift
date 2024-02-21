@@ -89,7 +89,7 @@ struct MyView: View {
                 Spacer()
                 
                 // TODO: 영양제 검색 페이지로 이동 MyListView()
-                NavigationLink(destination: MyDetailView()) {
+                NavigationLink(destination: MyListView()) {
                     Text("추가")
                         .foregroundStyle(Color("AccentColor"))
                 }
