@@ -16,7 +16,6 @@ struct MyDetailView: View {
     @State private var vibrateOnRing = false
     @State private var pushAlert = false
     @State private var Count: Int = 1
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         List {
@@ -146,7 +145,7 @@ struct MyDetailView: View {
         }
         
         Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
+            NavigationUtil.popToRootView()
         }, label: {
             Text("확인")
                 .frame(width: 372, height: 56)
@@ -174,3 +173,4 @@ struct MyDetailView: View {
 #Preview {
     MyDetailView()
 }
+
