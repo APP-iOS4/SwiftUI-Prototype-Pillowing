@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ReviewView: View {
+    
     @State var isCancelReview: Bool = false
     @State var review: String = ""
     
@@ -23,16 +24,16 @@ struct ReviewView: View {
     var body: some View {
         ZStack {
             VStack {
-//                HStack {
-//                    Button(action: {
-//                        isCancelReview.toggle()
-//                    }, label: {
-//                        Image(systemName: "chevron.left")
-//                            .foregroundStyle(Color.black)
-//                    })
-//                    .padding(.leading, 30)
-//                    Spacer()
-//                }
+                //                HStack {
+                //                    Button(action: {
+                //                        isCancelReview.toggle()
+                //                    }, label: {
+                //                        Image(systemName: "chevron.left")
+                //                            .foregroundStyle(Color.black)
+                //                    })
+                //                    .padding(.leading, 30)
+                //                    Spacer()
+                //                }
                 
                 HStack {
                     nutrientsStore.nutrients[0].image
@@ -120,15 +121,30 @@ struct ReviewView: View {
                 } label: {
                     Text("리뷰 쓰기")
                         .foregroundStyle(.white)
+                        .padding(EdgeInsets(top: 10, leading: 120, bottom: 10, trailing: 120))
+                        .background(
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(.accent)
+                        )
                 }
-                .padding(EdgeInsets(top: 10, leading: 120, bottom: 10, trailing: 120))
-                .background(
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(.accent)
-                )
+                
             }
             if isCancelReview {
                 ReviewCancelView(isCancelReview: $isCancelReview)
+            }
+        }
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    isCancelReview.toggle()
+                } label: {
+                    HStack {
+                        Image(systemName: "chevron.backward")
+                            .font(Font.headline)
+                        Text("Back")
+                    }
+                }
             }
         }
     }
