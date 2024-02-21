@@ -42,7 +42,7 @@ struct Nutrients : Identifiable {
     //리뷰 평균 평점
     var gradeAverage : Double {
         get {
-            guard let reviews else {
+            guard let reviews = reviews else {
                 return 0.0
             }
             return Double(reviews.map({$0.grade}).reduce(0,+)) / Double(reviews.count)
