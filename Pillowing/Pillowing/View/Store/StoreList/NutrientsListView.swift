@@ -59,7 +59,13 @@ struct NutrientsListView: View {
             }
             List{
                 ForEach(filterNutrients) { nutrients in
-                    NutrientsListLow(nutrients: nutrients)
+                    NavigationLink {
+                        NutrientsDetailView(nutrient: nutrients)
+                    } label: {
+                        NutrientsListLow(nutrients: nutrients)
+                    }
+
+                    
                 }
             }
             .listStyle(.plain)
