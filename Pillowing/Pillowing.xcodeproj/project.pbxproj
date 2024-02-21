@@ -33,6 +33,7 @@
 		A8BD677D2B849D940086469C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BD677C2B849D940086469C /* WebView.swift */; };
 		A8BD677F2B849EEF0086469C /* ReviewComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BD677E2B849EEF0086469C /* ReviewComponentView.swift */; };
 		EF2063ED2B85C3A800DD44F1 /* MyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2063EC2B85C3A800DD44F1 /* MyListView.swift */; };
+		A8BD67812B85CA2A0086469C /* MyNutrientsComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BD67802B85CA2A0086469C /* MyNutrientsComponentView.swift */; };
 		EFA847CF2B844289002D7126 /* MyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA847CE2B844289002D7126 /* MyDetailView.swift */; };
 		EFA847D12B8442B3002D7126 /* IntakeDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA847D02B8442B3002D7126 /* IntakeDayView.swift */; };
 		EFA847D32B844336002D7126 /* IntakeCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA847D22B844336002D7126 /* IntakeCountView.swift */; };
@@ -66,6 +67,7 @@
 		A8BD677C2B849D940086469C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		A8BD677E2B849EEF0086469C /* ReviewComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewComponentView.swift; sourceTree = "<group>"; };
 		EF2063EC2B85C3A800DD44F1 /* MyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListView.swift; sourceTree = "<group>"; };
+		A8BD67802B85CA2A0086469C /* MyNutrientsComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNutrientsComponentView.swift; sourceTree = "<group>"; };
 		EFA847CE2B844289002D7126 /* MyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailView.swift; sourceTree = "<group>"; };
 		EFA847D02B8442B3002D7126 /* IntakeDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntakeDayView.swift; sourceTree = "<group>"; };
 		EFA847D22B844336002D7126 /* IntakeCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntakeCountView.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				EFA847CE2B844289002D7126 /* MyDetailView.swift */,
 				EFA847D02B8442B3002D7126 /* IntakeDayView.swift */,
 				EFA847D22B844336002D7126 /* IntakeCountView.swift */,
+				A8BD67802B85CA2A0086469C /* MyNutrientsComponentView.swift */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				72CAE2322B8477C800471546 /* ReviewCancelView.swift in Sources */,
 				460900F22B84C31F00F7A227 /* SearchBarView.swift in Sources */,
 				72CAE2322B8477C800471546 /* ReviewCancelView.swift in Sources */,
+				A8BD67812B85CA2A0086469C /* MyNutrientsComponentView.swift in Sources */,
 				EFA847D32B844336002D7126 /* IntakeCountView.swift in Sources */,
 				A8BD67582B8426BE0086469C /* ContentView.swift in Sources */,
 				EFA847D12B8442B3002D7126 /* IntakeDayView.swift in Sources */,

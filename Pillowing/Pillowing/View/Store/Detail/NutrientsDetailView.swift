@@ -19,27 +19,31 @@ struct NutrientsDetailView: View {
     ]
     var body: some View {
         NavigationStack {
-            VStack(alignment: .center) {
-                productView
-                
-                NavigationLink(destination: WebView(urlString: nutrient.storeURL)) {
-                    ZStack {
-                        Rectangle()
-                            .fill(Color("AccentColor").opacity(0.3))
-                            .frame(width: 350, height: 50)
-                            .cornerRadius(10)
+            VStack {
+                ScrollView {
+                    VStack(alignment: .center) {
+                        productView
                         
-                        HStack {
-                            Text("이 제품 최저가로 바로가기                          >")
-                                .foregroundStyle(Color.black)
+                        NavigationLink(destination: WebView(urlString: nutrient.storeURL)) {
+                            ZStack {
+                                Rectangle()
+                                    .fill(Color("AccentColor").opacity(0.3))
+                                    .frame(width: 350, height: 50)
+                                    .cornerRadius(10)
+                                
+                                HStack {
+                                    Text("이 제품 최저가로 바로가기                          >")
+                                        .foregroundStyle(Color.black)
+                                }
+                            }
                         }
+                        
+                        Divider()
+                        
+                        // Review
+                        productReviewView
                     }
                 }
-                
-                Divider()
-                
-                // Review
-                productReviewView
                 
                 // Review Write Button
                 NavigationLink(destination: ReviewView()) {
@@ -129,13 +133,9 @@ struct NutrientsDetailView: View {
                 .font(.system(size: 18))
                 .fontWeight(.semibold)
             
-            ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading) {
-                    ForEach(0..<reviews.count, id: \.self) { i in
-                        ReviewComponentView(review: reviews[i])
-                            .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
-                    }
-                }
+            ForEach(0..<reviews.count, id: \.self) { i in
+                ReviewComponentView(review: reviews[i])
+                    .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
             }
         }
         .padding()
