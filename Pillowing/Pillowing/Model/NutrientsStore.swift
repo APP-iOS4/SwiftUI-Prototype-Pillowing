@@ -28,7 +28,24 @@ class NutrientsStore {
             ,
             Nutrients(name: "얼라이브 원스데일리 포맨 멀티비타민", imageString: "vitamin2", count: 80, price: 26490, storeURL: "https://www.coupang.com/vp/products/7460287402?itemId=20000650509&vendorItemId=81352051865&pickType=COU_PICK&q=%EC%A2%85%ED%95%A9+%EB%B9%84%ED%83%80%EB%AF%BC&itemsCount=36&searchId=5bbea606ab10468b99ba83892d509a4c&rank=1&isAddedCart=", category: .vitamin)
             ,
-            Nutrients(name: "뉴트리디데이 프리미엄 멀티비타민 골드", imageString: "vitamin3", count: 90, price: 9900, storeURL: "https://www.coupang.com/vp/products/7311465993?itemId=18657860312&vendorItemId=4529156516&q=%EC%A2%85%ED%95%A9+%EB%B9%84%ED%83%80%EB%AF%BC&itemsCount=36&searchId=5bbea606ab10468b99ba83892d509a4c&rank=7&isAddedCart=", category: .vitamin)
+            Nutrients(name: "뉴트리디데이 프리미엄 멀티비타민 골드", imageString: "vitamin3", count: 90, price: 9900, storeURL: "https://www.coupang.com/vp/products/7311465993?itemId=18657860312&vendorItemId=4529156516&q=%EC%A2%85%ED%95%A9+%EB%B9%84%ED%83%80%EB%AF%BC&itemsCount=36&searchId=5bbea606ab10468b99ba83892d509a4c&rank=7&isAddedCart=", category: .vitamin),
+            
+            //간
+            Nutrients(name: "GNM 자연의품격 건강한 간 밀크씨슬", imageString: "liver1", count: 150, price: 21120, storeURL: "https://www.coupang.com/vp/products/2210839123", category: .liver),
+            Nutrients(name: "나우푸드 실리마린 밀크 시슬 추출물 300mg 베지 캡슐", imageString: "liver2", count: 200, price: 22220, storeURL: "https://www.coupang.com/vp/products/7156986260", category: .liver),
+            Nutrients(name: "익스트림 밀크씨슬 플러스 800mg", imageString: "liver3", count: 180, price: 53000, storeURL: "https://www.coupang.com/vp/products/6565901505", category: .liver),
+            
+            //뼈
+            Nutrients(name: "종근당 칼슘 앤 마그네슘 비타민D 아연", imageString: "bone1", count: 360, price: 21300, storeURL: "https://www.coupang.com/vp/products/5545887952", category: .bone),
+            Nutrients(name: "닥터스베스트 MSM 1500mg 타블렛", imageString: "bone2", count: 120, price: 29680, storeURL: "https://www.coupang.com/vp/products/4791961748", category: .bone),
+            Nutrients(name: "센트룸 칼슘+D 미니 120g", imageString: "bone3", count: 120, price: 24000, storeURL: "https://www.coupang.com/vp/products/6594956058", category: .bone),
+            
+            //피부
+            Nutrients(name: "로엘 히알루론산 콜라겐정", imageString: "skin1", count: 60, price: 9880, storeURL: "https://www.coupang.com/vp/products/1349936400", category: .skin),
+            Nutrients(name: "재로우 판토텐산", imageString: "skin2", count: 100, price: 14960, storeURL: "https://www.coupang.com/vp/products/5542620167", category: .skin),
+            Nutrients(name: "닥터스베스트 히알루로닉 애시드 + 콘드로이틴 설페이트 베지 캡슐", imageString: "skin3", count: 180, price: 36470, storeURL: "https://www.coupang.com/vp/products/6812746053", category: .skin),
+            
+            
         ]
     }
     
