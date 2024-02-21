@@ -15,7 +15,7 @@
 		46B5B1942B84748800C6EC8A /* NutrientsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B5B1932B84748800C6EC8A /* NutrientsListView.swift */; };
 		46B5B1962B84759B00C6EC8A /* NutrientsListLow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B5B1952B84759B00C6EC8A /* NutrientsListLow.swift */; };
 		72CAE2302B84622800471546 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CAE22F2B84622800471546 /* ReviewView.swift */; };
-		72CAE2322B8477C800471546 /* ReviewCancleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CAE2312B8477C800471546 /* ReviewCancleView.swift */; };
+		72CAE2322B8477C800471546 /* ReviewCancelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CAE2312B8477C800471546 /* ReviewCancelView.swift */; };
 		A8BD67562B8426BE0086469C /* PillowingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BD67552B8426BE0086469C /* PillowingApp.swift */; };
 		A8BD67582B8426BE0086469C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BD67572B8426BE0086469C /* ContentView.swift */; };
 		A8BD675A2B8426BF0086469C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8BD67592B8426BF0086469C /* Assets.xcassets */; };
@@ -44,7 +44,7 @@
 		46B5B1932B84748800C6EC8A /* NutrientsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsListView.swift; sourceTree = "<group>"; };
 		46B5B1952B84759B00C6EC8A /* NutrientsListLow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsListLow.swift; sourceTree = "<group>"; };
 		72CAE22F2B84622800471546 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
-		72CAE2312B8477C800471546 /* ReviewCancleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCancleView.swift; sourceTree = "<group>"; };
+		72CAE2312B8477C800471546 /* ReviewCancelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCancelView.swift; sourceTree = "<group>"; };
 		A8BD67522B8426BE0086469C /* Pillowing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pillowing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8BD67552B8426BE0086469C /* PillowingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillowingApp.swift; sourceTree = "<group>"; };
 		A8BD67572B8426BE0086469C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -192,6 +192,7 @@
 				72CAE22F2B84622800471546 /* ReviewView.swift */,
 				72CAE2312B8477C800471546 /* ReviewCancleView.swift */,
 				A8BD677E2B849EEF0086469C /* ReviewComponentView.swift */,
+				72CAE2312B8477C800471546 /* ReviewCancelView.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -281,7 +282,7 @@
 				EFA847CF2B844289002D7126 /* MyDetailView.swift in Sources */,
 				A8BD676A2B843C660086469C /* CalendarView.swift in Sources */,
 				A8BD67682B84362F0086469C /* NutrientsStore.swift in Sources */,
-				72CAE2322B8477C800471546 /* ReviewCancleView.swift in Sources */,
+				72CAE2322B8477C800471546 /* ReviewCancelView.swift in Sources */,
 				EFA847D32B844336002D7126 /* IntakeCountView.swift in Sources */,
 				A8BD67582B8426BE0086469C /* ContentView.swift in Sources */,
 				EFA847D12B8442B3002D7126 /* IntakeDayView.swift in Sources */,
