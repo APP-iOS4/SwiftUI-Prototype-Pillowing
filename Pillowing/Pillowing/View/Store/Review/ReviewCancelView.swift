@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ReviewCancelView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Binding var isCancelReview: Bool
     
     var body: some View {
@@ -33,6 +34,7 @@ struct ReviewCancelView: View {
                     }
                     Button {
                         isCancelReview.toggle()
+                        self.presentationMode.wrappedValue.dismiss()
                     } label: {
                         Text("확인")
                             .padding(EdgeInsets(top: 10, leading: 50, bottom: 10, trailing: 50))
