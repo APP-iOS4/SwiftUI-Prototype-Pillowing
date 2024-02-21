@@ -32,6 +32,7 @@ struct Nutrients : Identifiable {
     // 리뷰, 평점
     var id = UUID()
     var name: String
+    var imageString: String
     var count: Int
     var price: Int
     var storeURL: String
@@ -50,7 +51,7 @@ struct Nutrients : Identifiable {
     }
     
     var image: Image {
-        Image(name)
+        Image(imageString)
     }
 }
 

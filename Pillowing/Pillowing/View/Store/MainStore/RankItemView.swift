@@ -56,5 +56,5 @@ struct RankItemView: View {
 }
 
 #Preview {
-    RankItemView(nutirent: Nutrients(name: "락토핏 생유산균 골드", count: 80, price: 11500, storeURL: "https://link.coupang.com/a/bq9bXH", category: .largeIntestine), rank: 1)
+    RankItemView(nutirent: Nutrients(name: "락토핏 생유산균 골드", imageString: "largeIntestine1", count: 80, price: 11500, storeURL: "https://link.coupang.com/a/bq9bXH", category: .largeIntestine), rank: 1)
 }

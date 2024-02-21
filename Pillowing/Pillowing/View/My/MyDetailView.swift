@@ -104,13 +104,13 @@ struct MyDetailView: View {
             // Sheet 높이 고정
                 .presentationDetents([.height(300)])
             // Sheet 굴곡
-                .presentationCornerRadius(40)
+//                .presentationCornerRadius(40)
         }
         
         .sheet(isPresented: $isShowingIntakeCountSheet) {
             IntakeCountView(isShowingSheet: $isShowingIntakeCountSheet)
                 .presentationDetents([.height(500)])
-                .presentationCornerRadius(40)
+//                .presentationCornerRadius(40)
         }
     }
 }
