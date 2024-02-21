@@ -30,15 +30,20 @@ struct DailyNutrientsView: View {
                         }, label: {
                             if isNutrientsTaken[idx] {
                                 Image(systemName: "pill.fill")
-                                    
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 23)
                             } else {
                                 Image(systemName: "pill.fill")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 23)
                                     .foregroundStyle(Color(red: 183/255, green: 183/255, blue: 183/255))
                             }
+                            
+                            Text(nutrientsName[idx])
+                                .foregroundStyle(Color.black)
                         })
-
-                        Text(nutrientsName[idx])
-                        
                     }
                 }
             }

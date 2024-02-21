@@ -55,14 +55,8 @@ struct CustomCalendarSelectionView: View {
                         Spacer()
                         
                         Picker("month", selection: $selectedMonth) {
-                            if selectedYear == "2024" {
-                                ForEach([1, 2], id:\.self) { month in
-                                    Text("\(month)")
-                                }
-                            } else {
-                                ForEach(months, id:\.self) { month in
-                                    Text("\(month)")
-                                }
+                            ForEach(months, id:\.self) { month in
+                                Text("\(month)")
                             }
                         }
                         .pickerStyle(.wheel)
