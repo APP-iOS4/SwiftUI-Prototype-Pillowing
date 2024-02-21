@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct IntakeCountView: View {
+    
+    @Binding var isShowingSheet: Bool
     @State private var date = Date()
     @State private var intakeNumber: Int = 1
     
@@ -54,7 +56,7 @@ struct IntakeCountView: View {
             HStack {
                 Spacer()
                 Button(action: {
-                    
+                    isShowingSheet.toggle()
                 }, label: {
                     Text("확인")
                 })
@@ -69,5 +71,5 @@ struct IntakeCountView: View {
 }
 
 #Preview {
-    IntakeCountView()
+    IntakeCountView(isShowingSheet: .constant(true))
 }

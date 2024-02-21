@@ -14,7 +14,7 @@ class NutrientsStore {
     init() {
         nutrients = [
             // 대장
-            Nutrients(name: "락토핏 생유산균 골드", count: 80, price: 11500, storeURL: "https://link.coupang.com/a/bq9bXH", category: .largeIntestine),
+            Nutrients(name: "락토핏 생유산균 골드", count: 80, price: 18500, storeURL: "https://link.coupang.com/a/bq9bXH", category: .largeIntestine),
             Nutrients(name: "덴프스 덴마크 유산균이야기", count: 60, price: 28700, storeURL: "https://link.coupang.com/a/bq9c28", category: .largeIntestine),
             Nutrients(name: "비포락토 프로바이오틱스", count: 30, price: 7980, storeURL: "https://link.coupang.com/a/bq9dUJ", category: .largeIntestine),
             

@@ -100,10 +100,17 @@ struct MyDetailView: View {
         }
         
         .sheet(isPresented: $isShowingIntakeDaySheet) {
-            IntakeDayView()
+            IntakeDayView(isShowingSheet: $isShowingIntakeDaySheet)
+            // Sheet 높이 고정
+                .presentationDetents([.height(300)])
+            // Sheet 굴곡
+                .presentationCornerRadius(40)
         }
+        
         .sheet(isPresented: $isShowingIntakeCountSheet) {
-            IntakeCountView()
+            IntakeCountView(isShowingSheet: $isShowingIntakeCountSheet)
+                .presentationDetents([.height(500)])
+                .presentationCornerRadius(40)
         }
     }
 }
