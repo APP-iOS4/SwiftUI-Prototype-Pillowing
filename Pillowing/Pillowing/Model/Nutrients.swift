@@ -27,9 +27,10 @@ enum Days: String {
     case Sunday = "일요일"
 }
 
-struct Nutrients {
+struct Nutrients : Identifiable {
     //이미지, 이름, 개수, 가격, (용량), 스토어 URL, 카테고리
     // 리뷰, 평점
+    var id = UUID()
     var name: String
     var count: Int
     var price: Int
@@ -37,6 +38,16 @@ struct Nutrients {
     var category: NutrientsType
     var reviews: [Review]?
     var rank: Int?
+    
+    //리뷰 평균 평점
+    var gradeAverage : Double {
+        get {
+            guard let reviews else {
+                return 0.0
+            }
+            return Double(reviews.map({$0.grade}).reduce(0,+)) / Double(reviews.count)
+        }
+    }
     
     var image: Image {
         Image(name)

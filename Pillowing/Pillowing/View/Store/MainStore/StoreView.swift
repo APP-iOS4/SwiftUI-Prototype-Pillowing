@@ -10,7 +10,13 @@ import SwiftUI
 struct StoreView: View {
     
     var nutreintsStore = NutrientsStore()
+    
     @State private var searchText = ""
+    
+    //실시간 순위를 위한 영양제 리스트
+    var nutreintsByRank : [Nutrients] {
+        nutreintsStore.getNutirentsBySortType(sortType: .starRating, category: .vitamin , allType: true)
+    }
     
     var gridItems = [
         GridItem(.flexible()),
@@ -18,28 +24,10 @@ struct StoreView: View {
         GridItem(.flexible())
     ]
     var body: some View {
-        NavigationStack{
+        NavigationStack(){
             VStack(spacing:20){
                 //검색창
-                HStack{
-                    TextField("영양제 검색",text : $searchText)
-                        .padding(.leading)
-                        .textFieldStyle(CustomTextField())
-                    Button(action: {
-                        
-                    }, label: {
-                        Text("검색")
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(height:  40)
-                            .background(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .fill(.accent)
-                            )
-                            .padding(.trailing)
-                        
-                    })
-                }
+                SearchBarView(searchText: $searchText)
                 //실시간 제품 순위
                 VStack{
                     HStack{
@@ -51,11 +39,9 @@ struct StoreView: View {
                     }
                     ScrollView(.horizontal) {
                         HStack(spacing:-5) {
-                            RankItemView(nutirent: nutreintsStore.nutrients[0])
-                            RankItemView(nutirent: nutreintsStore.nutrients[0])
-                            RankItemView(nutirent: nutreintsStore.nutrients[0])
-                            RankItemView(nutirent: nutreintsStore.nutrients[0])
-                            RankItemView(nutirent: nutreintsStore.nutrients[0])
+                            ForEach(0..<5) { rank in
+                                RankItemView(nutirent: nutreintsByRank[rank], rank: rank+1)
+                            }
                         }
                     }
                     
@@ -73,17 +59,14 @@ struct StoreView: View {
                     ScrollView(.vertical) {
                         LazyVGrid(columns: gridItems){
                             ForEach(NutrientsType.allCases , id: \.self) { nutrientType in
-                                Button(action: {
-
-                                }, label: {
-                                    NavigationLink {
-                                        NutrientsListView()
-                                    } label: {
-                                        VStack{
-                                            CategoryView(categoryName: nutrientType.rawValue, categoryImage: "person.fill")
-                                        }
+                                NavigationLink {
+                                    NutrientsListView( nutrientsType: nutrientType)
+                                } label: {
+                                    VStack{
+                                        CategoryView(categoryName: nutrientType.rawValue, categoryImage: "person.fill")
                                     }
-                                })
+                                }
+                                
                                 
                                 
                             }
@@ -92,6 +75,9 @@ struct StoreView: View {
                         .padding(.top,10)
                     }
                     
+                }
+                .onAppear{
+                    searchText = ""
                 }
                 .frame(maxHeight: .infinity)
             }

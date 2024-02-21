@@ -1,23 +1,18 @@
 {
   "images" : [
     {
+      "filename" : "Life Extension 라이프익스텐션 투퍼데이 Two-Per-Day Tablets 2.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Life Extension 라이프익스텐션 투퍼데이 Two-Per-Day Tablets 1.jpeg",
+      "filename" : "Life Extension 라이프익스텐션 투퍼데이 Two-Per-Day Tablets 3.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
       "scale" : "3x"
-    },
-    {
-      "filename" : "Life Extension 라이프익스텐션 투퍼데이 Two-Per-Day Tablets.jpeg",
-      "idiom" : "universal",
-      "scale" : "2x",
-      "unassigned" : true
     }
   ],
   "info" : {

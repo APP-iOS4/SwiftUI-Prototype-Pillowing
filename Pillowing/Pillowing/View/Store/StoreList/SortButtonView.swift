@@ -20,7 +20,6 @@ struct SortButtonView: View {
                     RoundedRectangle(cornerRadius: 15)
                         .stroke(Color.gray, lineWidth: 1)
                 )
-            .foregroundStyle(.gray)
             .fontWeight(.heavy)
             
     }

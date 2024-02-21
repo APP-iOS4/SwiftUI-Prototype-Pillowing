@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class NutrientsStore {
     var nutrients: [Nutrients] = []
@@ -30,4 +31,46 @@ class NutrientsStore {
             Nutrients(name: "뉴트리디데이 프리미엄 멀티비타민 골드", count: 90, price: 9900, storeURL: "https://www.coupang.com/vp/products/7311465993?itemId=18657860312&vendorItemId=4529156516&q=%EC%A2%85%ED%95%A9+%EB%B9%84%ED%83%80%EB%AF%BC&itemsCount=36&searchId=5bbea606ab10468b99ba83892d509a4c&rank=7&isAddedCart=", category: .vitamin)
         ]
     }
+    
+    //카테고리 별 리스트를 얻어오는 작업
+    func getNutirentsByCategory(category: NutrientsType) -> [Nutrients] {
+        return nutrients.filter{ $0.category == category }
+    }
+    
+    //스토어 리스트에서 정렬 타입별로 다시 리스트를 반환
+    func getNutirentsBySortType(sortType: SortType , category : NutrientsType , allType : Bool = false) -> [Nutrients] {
+        // 실시간 순위를 보여주기 위한 임시적으로 리뷰갯수로 실시간 순위를 반영 
+        if allType {
+            return nutrients.sorted(by: {$0.reviews?.count ?? 0 < $1.reviews?.count ?? 0} )
+        }
+        let nutrientsBySort = getNutirentsByCategory(category: category)
+        switch sortType {
+        case .lowPrice:
+            return nutrientsBySort.sorted(by: {$0.price < $1.price} )
+        case .highPrice:
+            return nutrientsBySort.sorted(by: {$0.price > $1.price} )
+        case .mostReviews:
+            return nutrientsBySort.sorted(by: {$0.reviews?.count ?? 0 < $1.reviews?.count ?? 0} )
+        case .starRating:
+            return nutrientsBySort.sorted(by: {$0.gradeAverage > $1.gradeAverage} )
+        }
+    }
+    
+    //검색 키워드를 기반으로 알맞는 영양제 리스트를 반환(임시용)
+    func getNutirentsBySearch(text : String) -> [Nutrients] {
+        var nutirentsBySearch : [Nutrients] = []
+        for nutrient in nutrients {
+            if nutrient.category.rawValue.contains(text) {
+                nutirentsBySearch.append(nutrient)
+            }
+        }
+        return nutirentsBySearch
+    }
+}
+
+enum SortType : String , CaseIterable {
+    case lowPrice = "낮은 가격순"
+    case highPrice = "높은 가격순"
+    case mostReviews = "리뷰 많은순"
+    case starRating = "별점 순"
 }
