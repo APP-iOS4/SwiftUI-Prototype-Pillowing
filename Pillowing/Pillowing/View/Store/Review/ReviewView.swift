@@ -23,16 +23,16 @@ struct ReviewView: View {
     var body: some View {
         ZStack {
             VStack {
-                HStack {
-                    Button(action: {
-                        isCancelReview.toggle()
-                    }, label: {
-                        Image(systemName: "chevron.left")
-                            .foregroundStyle(Color.black)
-                    })
-                    .padding(.leading, 30)
-                    Spacer()
-                }
+//                HStack {
+//                    Button(action: {
+//                        isCancelReview.toggle()
+//                    }, label: {
+//                        Image(systemName: "chevron.left")
+//                            .foregroundStyle(Color.black)
+//                    })
+//                    .padding(.leading, 30)
+//                    Spacer()
+//                }
                 
                 HStack {
                     nutrientsStore.nutrients[0].image

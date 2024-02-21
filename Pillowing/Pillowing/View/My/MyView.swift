@@ -67,21 +67,41 @@ struct MyView: View {
                         Divider()
                         HStack {
                             Spacer()
-                            Button(action: {
-                                
-                            }, label: {
-                                Text("루틴 중단")
-                                .foregroundStyle(.black)
-                            })
+//                            Button(action: {
+//                                
+//                            }, label: {
+//                                Text("루틴 중단")
+//                                .foregroundStyle(.black)
+//                            })
+//                            Spacer()
+//                            Divider()
+//                            Spacer()
+//                            Button(action: {
+//                                
+//                            }, label: {
+//                                Text("루틴 수정")
+//                                    .foregroundStyle(.black)
+//                            })
+//                            NavigationLink {
+//                                NutrientsDetailView()
+//                                MyDetailView()
+//                            } label: {
+//                                VStack{
+//                                    Text("루틴 중단")
+//                                        .foregroundStyle(.black)
+//                                }
+//                            }
+//                            Spacer()
+//                            Divider()
                             Spacer()
-                            Divider()
-                            Spacer()
-                            Button(action: {
-                                
-                            }, label: {
-                                Text("루틴 수정")
-                                    .foregroundStyle(.black)
-                            })
+                            NavigationLink {
+                                MyDetailView()
+                            } label: {
+                                VStack{
+                                    Text("루틴 수정")
+                                        .foregroundStyle(.black)
+                                }
+                            }
                             Spacer()
                         }
                     }
