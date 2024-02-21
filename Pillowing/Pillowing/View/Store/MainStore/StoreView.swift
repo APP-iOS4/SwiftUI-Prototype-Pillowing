@@ -40,7 +40,13 @@ struct StoreView: View {
                     ScrollView(.horizontal) {
                         HStack(spacing:-5) {
                             ForEach(0..<5) { rank in
-                                RankItemView(nutirent: nutreintsByRank[rank], rank: rank+1)
+                                NavigationLink {
+                                    NutrientsDetailView()
+                                } label: {
+                                    VStack{
+                                        RankItemView(nutirent: nutreintsByRank[rank], rank: rank+1)
+                                    }
+                                }
                             }
                         }
                     }

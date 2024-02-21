@@ -22,7 +22,7 @@ struct ContentView: View {
                 }
                 .tag(1)
             
-            MyDetailView()
+            MyView()
                 .tabItem {
                     Label("마이", systemImage: "person.fill")
                 }

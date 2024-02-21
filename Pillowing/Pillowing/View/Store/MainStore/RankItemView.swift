@@ -34,8 +34,10 @@ struct RankItemView: View {
             .padding(.bottom)
             VStack(alignment:.leading){
                 Text(nutirent.name)
+                    .foregroundStyle(.black)
                 
                 Text("\(nutirent.price)원")
+                    .foregroundStyle(.black)
                     .bold()
                     .font(.callout)
                     .padding(.top,-4)
