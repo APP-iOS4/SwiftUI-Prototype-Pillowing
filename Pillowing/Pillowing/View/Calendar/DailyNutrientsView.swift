@@ -11,7 +11,7 @@ struct DailyNutrientsView: View {
     var date: Int
     var day: Days
     var nutrientsName: [String] = ["락토핏 생유산균 골드 09:00", "안국건강 루테인 지아잔틴 미니 13:30", "얼라이브 원스데일리 포맨 멀티비타민 20:00"]
-    @State var isNutrientsTaken: [Bool] = Array(repeating: false, count: 3)
+    @Binding var isNutrientsTaken: [Bool]
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -54,5 +54,5 @@ struct DailyNutrientsView: View {
 }
 
 #Preview {
-    DailyNutrientsView(date: 20, day: .Thursday)
+    DailyNutrientsView(date: 20, day: .Thursday, isNutrientsTaken: .constant([true, false, true]))
 }

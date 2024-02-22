@@ -10,7 +10,7 @@ import SwiftUI
 struct CalendarView: View {
     let days: [Days] = [.Sunday, .Monday, .Tuesday, .Wednesday, .Thursday, .Friday, .Saturday]
     let dayString: [String] = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
-    let allTakenDays: [Int] = [1, 3, 8, 13, 22]
+    @State var takenLogs: [[Bool]] = Array(repeating: [false, false, false], count: 29)
     @State var selectedDate: Int = 20
     @State var selectedDay: Days = .Thursday
     @State var isShowingSelection: Bool = false
@@ -80,7 +80,7 @@ struct CalendarView: View {
                                         }
                                     })
                                     
-                                    if allTakenDays.contains(idx) {
+                                    if !takenLogs[idx - 1].contains(false) {
                                         Circle()
                                             .fill(Color(red: 141/255, green: 207/255, blue: 100/255))
                                             .frame(width: 7)
@@ -105,9 +105,8 @@ struct CalendarView: View {
                     .frame(height: 30)
                 
                 // My Nutrients
-                DailyNutrientsView(date: selectedDate, day: selectedDay)
+                DailyNutrientsView(date: selectedDate, day: selectedDay, isNutrientsTaken: $takenLogs[selectedDate - 1])
                     .padding()
-                
             }
             
             if isShowingSelection {
