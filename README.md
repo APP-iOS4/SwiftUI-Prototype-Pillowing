@@ -7,13 +7,13 @@
    2024.02.19(월) ~ 2024.02.22(목) / 4일
 
 ## 팀원 소개
-|          | 이름   | GitHub      | 
-| -------- | ----- | ----------- |
-| <img src="https://avatars.githubusercontent.com/u/147501980?v=4" alt="drawing" width="100"/> | 우성종 | [@sungjongwoo](https://github.com/sungjongwoo)   | 
-| <img src="https://avatars.githubusercontent.com/u/152110747?v=4" alt="drawing" width="100"/> | 유승재 | [@seungjaeyuu](https://github.com/seungjaeyuu) | 
-| <img src="https://avatars.githubusercontent.com/u/94823065?v=4" alt="drawing" width="100"/> | 이시형 | [@poetic-form](https://github.com/poetic-form)   |
-| <img src="https://avatars.githubusercontent.com/u/90377826?v=4" alt="drawing" width="100"/> | 정운관 | [@UnGwan](https://github.com/UnGwan)  |
-| <img src="https://avatars.githubusercontent.com/u/37467592?v=4" alt="drawing" width="100"/> | 최정인 | [@choijungp](https://github.com/choijungp)   | 
+|          | 이름   | GitHub      | 프로젝트 소감 |
+| -------- | ----- | ----------- | ---------- |
+| <img src="https://avatars.githubusercontent.com/u/147501980?v=4" alt="drawing" width="100"/> | 우성종 | [@sungjongwoo](https://github.com/sungjongwoo)   | 첫 SwiftUI 프로토타입✌️ 협업을 통해 너무 즐거웠습니다. |
+| <img src="https://avatars.githubusercontent.com/u/152110747?v=4" alt="drawing" width="100"/> | 유승재 | [@seungjaeyuu](https://github.com/seungjaeyuu) | 배추(배열 추가)가 정말 힘들었어요! 그래도 성공해서 다행! |
+| <img src="https://avatars.githubusercontent.com/u/94823065?v=4" alt="drawing" width="100"/> | 이시형 | [@poetic-form](https://github.com/poetic-form) | 시형님의 앱스쿨에서의 마지막 프로젝트! 의미있으셨길 바랍니다.. |
+| <img src="https://avatars.githubusercontent.com/u/90377826?v=4" alt="drawing" width="100"/> | 정운관 | [@UnGwan](https://github.com/UnGwan)  | |
+| <img src="https://avatars.githubusercontent.com/u/37467592?v=4" alt="drawing" width="100"/> | 최정인 | [@choijungp](https://github.com/choijungp) | 평소 Custom Calendar 구현에 관심있었는데 이번 기회를 통해 구현해볼 수 있어서 궁금증 해결! 굿! |
 
 ## ADS
    영양제를 까먹거나 잊어버리는 모든 사람들을 위한 서비스로, 바쁜 일상 속에서 건강을 유지하고자 하는 분들에게 특히 유용합니다.
@@ -31,10 +31,10 @@
    바쁜 생활 방식으로 인해 보충제를 제때에 복용하는 것을 종종 잊어버려 예정된 섭취 시간을 놓치면 푸시 알람을 보내는 안정적인 알림 시스템이 필요하다.
 
 ## 앱 개발 및 배포 환경
-   Xcode version: 15.2      
-   Swift 5.9.2       
-   iOS Version: 17.2       
-   실행 환경: iPhone 15 Pro       
+   - Xcode version: 15.2      
+   - Swift 5.9.2       
+   - iOS Version: 17.2       
+   - 실행 환경: iPhone 15 Pro       
 
 ## 앱 실행 환경
    1. Git 프로젝트 Clone.
