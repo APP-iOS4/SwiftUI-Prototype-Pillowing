@@ -28,8 +28,26 @@ class NutrientsStore {
             ,
             Nutrients(name: "얼라이브 원스데일리 포맨 멀티비타민", imageString: "vitamin2", count: 80, price: 26490, storeURL: "https://www.coupang.com/vp/products/7460287402?itemId=20000650509&vendorItemId=81352051865&pickType=COU_PICK&q=%EC%A2%85%ED%95%A9+%EB%B9%84%ED%83%80%EB%AF%BC&itemsCount=36&searchId=5bbea606ab10468b99ba83892d509a4c&rank=1&isAddedCart=", category: .vitamin)
             ,
-            Nutrients(name: "뉴트리디데이 프리미엄 멀티비타민 골드", imageString: "vitamin3", count: 90, price: 9900, storeURL: "https://www.coupang.com/vp/products/7311465993?itemId=18657860312&vendorItemId=4529156516&q=%EC%A2%85%ED%95%A9+%EB%B9%84%ED%83%80%EB%AF%BC&itemsCount=36&searchId=5bbea606ab10468b99ba83892d509a4c&rank=7&isAddedCart=", category: .vitamin)
+            Nutrients(name: "뉴트리디데이 프리미엄 멀티비타민 골드", imageString: "vitamin3", count: 90, price: 9900, storeURL: "https://www.coupang.com/vp/products/7311465993?itemId=18657860312&vendorItemId=4529156516&q=%EC%A2%85%ED%95%A9+%EB%B9%84%ED%83%80%EB%AF%BC&itemsCount=36&searchId=5bbea606ab10468b99ba83892d509a4c&rank=7&isAddedCart=", category: .vitamin),
+            
+            //간
+            Nutrients(name: "GNM 자연의품격 건강한 간 밀크씨슬", imageString: "liver1", count: 150, price: 21120, storeURL: "https://www.coupang.com/vp/products/2210839123", category: .liver),
+            Nutrients(name: "나우푸드 실리마린 밀크 시슬 추출물 300mg 베지 캡슐", imageString: "liver2", count: 200, price: 22220, storeURL: "https://www.coupang.com/vp/products/7156986260", category: .liver),
+            Nutrients(name: "익스트림 밀크씨슬 플러스 800mg", imageString: "liver3", count: 180, price: 53000, storeURL: "https://www.coupang.com/vp/products/6565901505", category: .liver),
+            
+            //뼈
+            Nutrients(name: "종근당 칼슘 앤 마그네슘 비타민D 아연", imageString: "bone1", count: 360, price: 21300, storeURL: "https://www.coupang.com/vp/products/5545887952", category: .bone),
+            Nutrients(name: "닥터스베스트 MSM 1500mg 타블렛", imageString: "bone2", count: 120, price: 29680, storeURL: "https://www.coupang.com/vp/products/4791961748", category: .bone),
+            Nutrients(name: "센트룸 칼슘+D 미니 120g", imageString: "bone3", count: 120, price: 24000, storeURL: "https://www.coupang.com/vp/products/6594956058", category: .bone),
+            
+            //피부
+            Nutrients(name: "로엘 히알루론산 콜라겐정", imageString: "skin1", count: 60, price: 9880, storeURL: "https://www.coupang.com/vp/products/1349936400", category: .skin),
+            Nutrients(name: "재로우 판토텐산", imageString: "skin2", count: 100, price: 14960, storeURL: "https://www.coupang.com/vp/products/5542620167", category: .skin),
+            Nutrients(name: "닥터스베스트 히알루로닉 애시드 + 콘드로이틴 설페이트 베지 캡슐", imageString: "skin3", count: 180, price: 36470, storeURL: "https://www.coupang.com/vp/products/6812746053", category: .skin),
+            
+            
         ]
+        generateExampleReviews()
     }
     
     //카테고리 별 리스트를 얻어오는 작업
@@ -39,7 +57,7 @@ class NutrientsStore {
     
     //스토어 리스트에서 정렬 타입별로 다시 리스트를 반환
     func getNutirentsBySortType(sortType: SortType , category : NutrientsType , allType : Bool = false) -> [Nutrients] {
-        // 실시간 순위를 보여주기 위한 임시적으로 리뷰갯수로 실시간 순위를 반영 
+        // 실시간 순위를 보여주기 위한 임시적으로 리뷰갯수로 실시간 순위를 반영
         if allType {
             return nutrients.sorted(by: {$0.reviews?.count ?? 0 < $1.reviews?.count ?? 0} )
         }
@@ -66,7 +84,69 @@ class NutrientsStore {
         }
         return nutirentsBySearch
     }
+    
+    
+    //임시적으로 리뷰를 만들어주는 함수
+    
+    func generateExampleReviews() {
+        let testUser = ["최정인","정운관","유승재","이시형","우성종","짱구","훈이","철수","도라에몽","코난","루피","익명1","남도일","뽀로로","텔레토피"]
+        let testDescription = [
+            "정말 좋은 거 같아요! 효과가 느껴져서 매우 만족합니다.",
+            "효과는 있지만 가격이 조금 비싸요. 그래도 효과를 생각하면 괜찮은 것 같아요.",
+            "향이 강해서 복용이 좀 힘들었어요. 그래도 효과는 좋네요.",
+            "제대로 먹으면 정말 좋은 제품인 것 같아요.",
+            "가성비 좋은 제품! 효과도 좋고 가격도 착해요.",
+            "별로 효과를 못 느끼겠어요. 다른 제품을 찾아봐야 할 것 같아요.",
+            "효과가 좋아서 계속 재구매 중이에요.",
+            "매일 꾸준히 복용 중이라 효과가 꾸준히 나타나고 있어요.",
+            "포장이 꼼꼼해서 좋아요. 제품도 효과가 좋아서 만족합니다.",
+            "비슷한 제품을 여러 개 시도해봤는데, 이게 제일 좋아요!"
+        ]
+        let testBadDescription = [
+            "효과가 하나도 없어요. 돈 낭비인 것 같아요.",
+            "별로에요. 다른 제품으로 바꾸려고 생각 중이에요.",
+            "향이 정말 못 참겠어요. 복용하기가 어렵습니다.",
+            "가격 대비 효과가 너무 아쉬워요. 실망입니다.",
+            "부작용이 생겼어요. 이걸로 인해 건강이 더 나빠졌어요.",
+            "효과를 기대하고 있었는데 아무런 변화가 없어요.",
+            "피부에 발진이 생겼어요. 안 좋은 부작용이 나타납니다.",
+            "복용 후에 이상한 증상이 나타나서 중단했어요.",
+            "효과가 너무 미미해서 기대 이하에요.",
+            "다른 사람들이 좋다고 해서 샀는데, 제게는 맞지 않는 것 같아요."
+        ]
+        let testGrade = [
+            5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+            4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,
+            3,3,3,3,3,3,
+            2,2,2,2,2,
+            1,1,1,1
+        ]
+        for index in 0..<nutrients.count {
+            if nutrients[index].reviews == nil {
+                nutrients[index].reviews = []
+            }
+//            var grade = testGrade.randomElement()!
+//            var desrcription = grade > 3 ? testDescription.randomElement()! : testBadDescription.randomElement()!
+//            let exampleReview1 = Review(userName: testUser.randomElement()!, grade: grade, description: desrcription)
+//            grade = testGrade.randomElement()!
+//            desrcription = grade > 3 ? testDescription.randomElement()! : testBadDescription.randomElement()!
+//            let exampleReview2 = Review(userName: testUser.randomElement()!, grade: grade, description: desrcription)
+//            grade = testGrade.randomElement()!
+//            desrcription = grade > 3 ? testDescription.randomElement()! : testBadDescription.randomElement()!
+//            let exampleReview3 = Review(userName: testUser.randomElement()!, grade: grade, description: desrcription)
+//            
+//            nutrients[index].reviews?.append(contentsOf: [exampleReview1, exampleReview2, exampleReview3])
+            for _ in 0...(1...100).randomElement()! {
+                let grade = testGrade.randomElement()!
+                let desrcription = grade > 3 ? testDescription.randomElement()! : testBadDescription.randomElement()!
+                let exampleReview1 = Review(userName: testUser.randomElement()!, grade: grade, description: desrcription)
+                nutrients[index].reviews?.append(exampleReview1)
+            }
+            
+        }
+    }
 }
+
 
 enum SortType : String , CaseIterable {
     case lowPrice = "낮은 가격순"

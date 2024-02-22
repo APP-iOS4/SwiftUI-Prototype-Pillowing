@@ -8,41 +8,46 @@
 import SwiftUI
 
 struct NutrientsDetailView: View {
-    var nutrient: Nutrients = NutrientsStore().nutrients[0]
+    var nutrient: Nutrients
     var nutrientStar: Double = 4.2
-    let reviews: [Review] = [
-        Review(userName: "최정인", grade: 4, description: "이거 먹고 내 건강시대 시작됐다."),
-        Review(userName: "이시형", grade: 4, description: "장 건강엔 락토핏 생유산균 골드"),
-        Review(userName: "정운관", grade: 5, description: "5박스째 시켜먹고 있어요. 굿 👍🏻"),
-        Review(userName: "우성종", grade: 4, description: "장 튼튼, 건강 튼튼, 락토핏 락토핏"),
-        Review(userName: "유승재", grade: 4, description: "역시 유산균은 락토핏 생유산균 골드!!"),
-    ]
+    //    let reviews: [Review] = [
+    //        Review(userName: "최정인", grade: 4, description: "이거 먹고 내 건강시대 시작됐다."),
+    //        Review(userName: "이시형", grade: 4, description: "장 건강엔 락토핏 생유산균 골드"),
+    //        Review(userName: "정운관", grade: 5, description: "5박스째 시켜먹고 있어요. 굿 👍🏻"),
+    //        Review(userName: "우성종", grade: 4, description: "장 튼튼, 건강 튼튼, 락토핏 락토핏"),
+    //        Review(userName: "유승재", grade: 4, description: "역시 유산균은 락토핏 생유산균 골드!!"),
+    //    ]
+    
     var body: some View {
         NavigationStack {
-            VStack(alignment: .center) {
-                productView
-                
-                NavigationLink(destination: WebView(urlString: nutrient.storeURL)) {
-                    ZStack {
-                        Rectangle()
-                            .fill(Color("AccentColor").opacity(0.3))
-                            .frame(width: 350, height: 50)
-                            .cornerRadius(10)
+            VStack {
+                ScrollView {
+                    VStack(alignment: .center) {
+                        productView
                         
-                        HStack {
-                            Text("이 제품 최저가로 바로가기                          >")
-                                .foregroundStyle(Color.black)
+                        NavigationLink(destination: WebView(urlString: nutrient.storeURL)) {
+                            ZStack {
+                                Rectangle()
+                                    .fill(Color("AccentColor").opacity(0.3))
+                                    .frame(width: 350, height: 50)
+                                    .cornerRadius(10)
+                                
+                                HStack {
+                                    Text("이 제품 최저가로 바로가기                          >")
+                                        .foregroundStyle(Color.black)
+                                }
+                            }
                         }
+                        
+                        Divider()
+                        
+                        // Review
+                        productReviewView
                     }
                 }
                 
-                Divider()
-                
-                // Review
-                productReviewView
-                
                 // Review Write Button
-                NavigationLink(destination: ReviewView()) {
+                NavigationLink(destination: ReviewView( nutrient: nutrient)) {
                     ZStack {
                         Rectangle()
                             .fill(Color("AccentColor"))
@@ -99,20 +104,22 @@ struct NutrientsDetailView: View {
                     Spacer()
                         .frame(width: 100)
                     
-                    ForEach(0..<5, id: \.self) { i in
-                        if i < Int(floor(nutrientStar)) {
-                            Image(systemName: "star.fill")
-                                .foregroundStyle(Color(red: 255/255, green: 196/255, blue: 68/255))
-                        } else {
-                            Image(systemName: "star.fill")
-                                .foregroundStyle(Color(red: 221/255, green: 221/255, blue: 221/255))
-                        }
-                    }
+                    //                    ForEach(0..<5, id: \.self) { i in
+                    //                        if i < Int(floor(nutrientStar)) {
+                    //                            Image(systemName: "star.fill")
+                    //                                .foregroundStyle(Color(red: 255/255, green: 196/255, blue: 68/255))
+                    //                        } else {
+                    //                            Image(systemName: "star.fill")
+                    //                                .foregroundStyle(Color(red: 221/255, green: 221/255, blue: 221/255))
+                    //                        }
+                    //                    }
+                    //
+                    //                    Text("\(nutrientStar, specifier: "%.1f")")
+                    //
+                    //                    Text("(\(reviews.count))")
+                    //                        .foregroundStyle(Color(red: 193/255, green: 193/255, blue: 193/255))
+                    StarView(starCount: nutrient.gradeAverage , reviewCount: nutrient.reviews?.count ?? 0)
                     
-                    Text("\(nutrientStar, specifier: "%.1f")")
-                    
-                    Text("(\(reviews.count))")
-                        .foregroundStyle(Color(red: 193/255, green: 193/255, blue: 193/255))
                 }
             }
             .padding()
@@ -129,19 +136,21 @@ struct NutrientsDetailView: View {
                 .font(.system(size: 18))
                 .fontWeight(.semibold)
             
-            ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading) {
-                    ForEach(0..<reviews.count, id: \.self) { i in
-                        ReviewComponentView(review: reviews[i])
-                            .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
-                    }
+            if let reviews = nutrient.reviews {
+                ForEach(0..<(reviews.count) , id: \.self) {
+                    num in
+                    ReviewComponentView(review: reviews[num])
+                        .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
                 }
             }
         }
         .padding()
     }
+        
 }
 
+
+
 #Preview {
-    NutrientsDetailView()
+    NutrientsDetailView(nutrient: NutrientsStore().nutrients[0])
 }

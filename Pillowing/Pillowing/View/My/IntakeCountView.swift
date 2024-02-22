@@ -46,7 +46,9 @@ struct IntakeCountView: View {
                 Spacer()
                 
                 Button(action: {
-                    intakeNumber += 1
+                    if intakeNumber <= 3 {
+                        intakeNumber += 1
+                    }
                 }, label: {
                     Image(systemName: "plus.circle.fill")
                 })
@@ -59,11 +61,11 @@ struct IntakeCountView: View {
                     isShowingSheet.toggle()
                 }, label: {
                     Text("확인")
+                        .frame(width: 372, height: 56)
+                        .background(Color.accentColor)
+                        .foregroundStyle(.white)
+                        .cornerRadius(20)
                 })
-                .frame(width: 372, height: 56)
-                .background(Color.accentColor)
-                .foregroundStyle(.white)
-                .cornerRadius(20)
                 Spacer()
             }
         }

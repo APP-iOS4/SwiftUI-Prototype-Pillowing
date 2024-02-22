@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ReviewView: View {
+    
     @State var isCancelReview: Bool = false
     @State var review: String = ""
     
@@ -18,32 +19,33 @@ struct ReviewView: View {
     #을 입력해 태그를 추가할 수도 있어요.
     """
     let nutrientsStore = NutrientsStore()
+    let nutrient : Nutrients
     @State var stars: [Bool] = [true, true, true, true, true]
     
     var body: some View {
         ZStack {
             VStack {
-//                HStack {
-//                    Button(action: {
-//                        isCancelReview.toggle()
-//                    }, label: {
-//                        Image(systemName: "chevron.left")
-//                            .foregroundStyle(Color.black)
-//                    })
-//                    .padding(.leading, 30)
-//                    Spacer()
-//                }
+                //                HStack {
+                //                    Button(action: {
+                //                        isCancelReview.toggle()
+                //                    }, label: {
+                //                        Image(systemName: "chevron.left")
+                //                            .foregroundStyle(Color.black)
+                //                    })
+                //                    .padding(.leading, 30)
+                //                    Spacer()
+                //                }
                 
                 HStack {
-                    nutrientsStore.nutrients[0].image
+                    nutrient.image
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 30)
                         .padding()
                     VStack(alignment: .leading) {
-                        Text("\(nutrientsStore.nutrients[0].category.rawValue)")
+                        Text("\(nutrient.category.rawValue)")
                             .foregroundStyle(.gray)
-                        Text("\(nutrientsStore.nutrients[0].name)")
+                        Text("\(nutrient.name)")
                     }
                     Spacer()
                 }
@@ -120,15 +122,30 @@ struct ReviewView: View {
                 } label: {
                     Text("리뷰 쓰기")
                         .foregroundStyle(.white)
+                        .padding(EdgeInsets(top: 10, leading: 120, bottom: 10, trailing: 120))
+                        .background(
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(.accent)
+                        )
                 }
-                .padding(EdgeInsets(top: 10, leading: 120, bottom: 10, trailing: 120))
-                .background(
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(.accent)
-                )
+                
             }
             if isCancelReview {
                 ReviewCancelView(isCancelReview: $isCancelReview)
+            }
+        }
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    isCancelReview.toggle()
+                } label: {
+                    HStack {
+                        Image(systemName: "chevron.backward")
+                            .font(Font.headline)
+                        Text("Back")
+                    }
+                }
             }
         }
     }
@@ -136,6 +153,6 @@ struct ReviewView: View {
 
 #Preview {
     NavigationStack {
-        ReviewView()
+        ReviewView(nutrient: NutrientsStore().nutrients[0])
     }
 }

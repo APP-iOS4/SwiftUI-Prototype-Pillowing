@@ -33,8 +33,15 @@ struct RankItemView: View {
             }
             .padding(.bottom)
             VStack(alignment:.leading){
+                Text(nutirent.category.rawValue)
+                    .font(.caption)
+                    .foregroundStyle(.gray)
+                    .fontWeight(.bold)
                 Text(nutirent.name)
+                    .frame(width: 150 , alignment: .leading)
                     .foregroundStyle(.black)
+                    .lineLimit(1)
+                    
                 
                 Text("\(nutirent.price)원")
                     .foregroundStyle(.black)
@@ -54,7 +61,10 @@ struct RankItemView: View {
                 .shadow(color: Color.gray, radius: 4, x: 0, y: 2)
         )
         .padding([.top,.bottom,.leading])
+        .frame(width:300)
+        
     }
+    
 }
 
 #Preview {
