@@ -71,7 +71,12 @@
    - View들 간의 데이터 연결이 아직 되지 않은 것
 
 ## 실행화면
-   피드백 이후 추가 예정   
+| Calendar |  Store |   My   | 
+| -------- | ----- | ------ |
+|![calendar](https://github.com/APP-iOS4/SwiftUI-Prototype-Pillowing/assets/37467592/9b1449ea-965f-4825-a227-971ec5f10b3b)|![Store](https://github.com/APP-iOS4/SwiftUI-Prototype-Pillowing/assets/37467592/a6857192-a0af-42f3-af02-4919c2e3db3f)|![My](https://github.com/APP-iOS4/SwiftUI-Prototype-Pillowing/assets/37467592/ccbbab18-8dc5-4f64-9609-3bd3d6cc0d2f)|
+
+
+
      
 ## Notice
    이미지 출처는 구글링 및 필라멘토 홈페이지에서 발췌했습니다.      
