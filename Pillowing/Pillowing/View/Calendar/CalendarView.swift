@@ -10,7 +10,7 @@ import SwiftUI
 struct CalendarView: View {
     let days: [Days] = [.Sunday, .Monday, .Tuesday, .Wednesday, .Thursday, .Friday, .Saturday]
     let dayString: [String] = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
-    @State var takenLogs: [[Bool]] = Array(repeating: [false, false, false], count: 29)
+    @State var takenLogs = Array(repeating: [false, false, false], count: 29)
     @State var selectedDate: Int = 20
     @State var selectedDay: Days = .Thursday
     @State var isShowingSelection: Bool = false
